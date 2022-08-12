@@ -1,3 +1,4 @@
+import constants as c
 #This will house any functions I use in the program other than the one I use to call the orogram in main
 
 # 1 I need a function to tell me if any given number is a prime (is_prime),
@@ -7,7 +8,7 @@
 def is_prime(num):
     if num > 1:
         for n in range(2, num):
-            if num % n != 0:
+            if num % n != 0 and num not in c.SKIP:
                 continue
             else:
                 return False
